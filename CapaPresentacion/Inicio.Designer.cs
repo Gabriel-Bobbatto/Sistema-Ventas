@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             menu = new MenuStrip();
+            menuusuarios = new FontAwesome.Sharp.IconMenuItem();
             menumantenedor = new FontAwesome.Sharp.IconMenuItem();
             menuventas = new FontAwesome.Sharp.IconMenuItem();
             menucompras = new FontAwesome.Sharp.IconMenuItem();
@@ -39,7 +40,6 @@
             menutitulo = new MenuStrip();
             label1 = new Label();
             contenedor = new Panel();
-            menuusuarios = new FontAwesome.Sharp.IconMenuItem();
             menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,6 +52,19 @@
             menu.Size = new Size(1212, 73);
             menu.TabIndex = 0;
             menu.Text = "menuStrip1";
+            // 
+            // menuusuarios
+            // 
+            menuusuarios.AutoSize = false;
+            menuusuarios.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
+            menuusuarios.IconColor = Color.Black;
+            menuusuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            menuusuarios.IconSize = 50;
+            menuusuarios.ImageScaling = ToolStripItemImageScaling.None;
+            menuusuarios.Name = "menuusuarios";
+            menuusuarios.Size = new Size(122, 69);
+            menuusuarios.Text = "Usuarios";
+            menuusuarios.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // menumantenedor
             // 
@@ -175,19 +188,6 @@
             contenedor.Size = new Size(1212, 457);
             contenedor.TabIndex = 3;
             // 
-            // menuusuarios
-            // 
-            menuusuarios.AutoSize = false;
-            menuusuarios.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
-            menuusuarios.IconColor = Color.Black;
-            menuusuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menuusuarios.IconSize = 50;
-            menuusuarios.ImageScaling = ToolStripItemImageScaling.None;
-            menuusuarios.Name = "menuusuarios";
-            menuusuarios.Size = new Size(122, 69);
-            menuusuarios.Text = "Usuarios";
-            menuusuarios.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -199,6 +199,7 @@
             Controls.Add(menutitulo);
             MainMenuStrip = menu;
             Name = "Inicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             menu.ResumeLayout(false);
             menu.PerformLayout();
